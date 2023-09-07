@@ -1,7 +1,6 @@
-- hosts: all
-  tasks:
+---
     - name: install apache
-      apt: 
+      ansible_builtin.apt:
         name: apache2 
         update_cache: yes 
         state: latest
