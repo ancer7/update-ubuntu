@@ -1,7 +1,12 @@
 - hosts: all
+  become: true
+  become_user: root
   tasks:
     - name: install apache
-      apt: name=apache2 update_cache=yes state=latest
+      apt: 
+        name: apache2 
+        update_cache: yes 
+        state: latest
 
     - name: install ansible
       apt: name=ansible update_cache=yes state=latest
