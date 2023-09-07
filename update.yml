@@ -1,6 +1,6 @@
 - hosts: all
   become: true
-  become_user: root
+  become_user: parallels
   tasks:
     - name: install apache
       apt: 
