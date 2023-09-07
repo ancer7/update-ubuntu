@@ -1,6 +1,8 @@
 ---
     - name: install apache
+      become: true
       ansible_builtin.apt:
+        become_user: parallels
         name: apache2 
         update_cache: yes 
         state: latest
