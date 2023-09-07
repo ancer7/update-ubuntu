@@ -1,7 +1,8 @@
----
-    - name: install apache
-      become: true
-      ansible_builtin.apt:
+ 
+- name: Ansible install apache server 
+  become: true
+  tasks:
+    - name: Install Apache
         become_user: parallels
         name: apache2 
         update_cache: yes 
