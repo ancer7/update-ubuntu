@@ -2,13 +2,8 @@
 - name: Ansible install apache server 
   hosts: worker1
   tasks:
-    - name: packages | ensure apt list dir exists
-      file:
-        path: /var/lib/apt/lists/
-        state: directory
-        mode: 0755
-
-    - name: Install Apache
+    - name: Install Apache use ansible
+      become: true
       apt:
         name: apache2 
         update_cache: yes 
