@@ -3,7 +3,7 @@
   hosts: worker1
   tasks:
     - name: Install Apache use ansible
-      become: true
+      become_user: root
       apt:
         name: apache2 
         update_cache: yes 
