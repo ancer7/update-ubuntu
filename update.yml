@@ -1,9 +1,10 @@
- 
+--- 
 - name: Ansible install apache server 
+  hosts: worker1
   become: true
   tasks:
     - name: Install Apache
-        become_user: parallels
+      apt:
         name: apache2 
         update_cache: yes 
         state: latest
