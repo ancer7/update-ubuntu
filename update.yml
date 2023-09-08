@@ -1,6 +1,7 @@
 --- 
 - name: Ansible install apache server 
   hosts: worker1
+  become: true
   tasks:
     - name: Install Apache use ansible
       become_user: root
